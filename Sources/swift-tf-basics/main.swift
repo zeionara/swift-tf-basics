@@ -10,6 +10,12 @@ extension Complex {
 }
 
 
+extension Person {
+    func printLastName() {
+        print(#"Last name of \#(self) is "\#(lastName)""#)    
+    }
+}
+
 func main() {
     print("Hello! Here is an example of the simplest tensor: \(Tensor(1))")
     print("Here is a vector: \(Tensor([1, 2]))")
@@ -19,6 +25,8 @@ func main() {
     print("It is equal to \(complexNumber)")
     print("It's conj is equal to \(complexNumber.conj)")
     print("Their sum is equal to \(complexNumber.add(complexNumber.conj))")
+    Person(firstName: "Ze", restName: "Io Nara").printLastName()
+    Person(firstName: "Zeio Nara", restName: nil).printLastName()
 }
 
 main()
