@@ -5,7 +5,7 @@ SWIFT_ARCHIVE=$SWIFT_ARCHIVE_WITHOUT_EXTENSION.tar.gz
 LOCATION=${2:-/usr/share/}
 SWIFT_ROOT=$LOCATION$SWIFT_ARCHIVE_WITHOUT_EXTENSION
 echo "Installing dependencies..."
-sudo apt install curl git clang libsqlite3-dev libblocksruntime-dev libncurses5-dev
+sudo apt install curl git clang libsqlite3-dev libblocksruntime-dev libncurses5-dev libncurses5
 echo "Downloading swift $SWIFT_VERSION for ubuntu 18.04..."
 wget -O $SWIFT_ARCHIVE https://swift.org/builds/swift-$SWIFT_VERSION-release/ubuntu1804/swift-$SWIFT_VERSION-RELEASE/swift-$SWIFT_VERSION-RELEASE-ubuntu18.04.tar.gz
 echo "Extracting archive to $LOCATION..."
